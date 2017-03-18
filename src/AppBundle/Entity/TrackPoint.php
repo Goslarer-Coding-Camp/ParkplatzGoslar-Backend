@@ -42,6 +42,13 @@ class TrackPoint
      */
     private $lon;
 
+    /**
+     * @var Track
+     *
+     * @ORM\ManyToOne(targetEntity="Track")
+     */
+    private $track;
+
 
     /**
      * Get id
@@ -123,6 +130,24 @@ class TrackPoint
     public function getLon()
     {
         return $this->lon;
+    }
+
+    /**
+     * @param Track $track
+     * @return TrackPoint
+     */
+    public function setTrack($track)
+    {
+        $this->track = $track;
+        return $this;
+    }
+
+    /**
+     * @return Track
+     */
+    public function getTrack()
+    {
+        return $this->track;
     }
 }
 

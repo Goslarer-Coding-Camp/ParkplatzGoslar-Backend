@@ -23,3 +23,8 @@ Datenformat
             }
         ]
     }
+
+Endpoints
+===
+
+`POST` auf `/route`

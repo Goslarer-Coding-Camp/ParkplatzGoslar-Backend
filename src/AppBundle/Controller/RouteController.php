@@ -35,7 +35,8 @@ class RouteController extends Controller
             $tp
                 ->setLat($point->lat)
                 ->setLon($point->lon)
-                ->setTimestamp(\DateTime::createFromFormat(\DateTime::ISO8601, $point->timestamp));
+                ->setTimestamp(\DateTime::createFromFormat(\DateTime::ISO8601, $point->timestamp))
+                ->setTrack($track);
             $em->persist($tp);
         }
 
